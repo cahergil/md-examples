@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.carlos.coordinatorlayout.coordinatorlayout.MainActivity">
+    <!-- recordar que el AppBarLayout es in LinearLayout vitaminado, por tanto si colocamos dos elementos
+    uno debajo del otro va a hacer lo mismo que un LinearLayout, en cambiio con CollapsingToolbarLayout esto
+    no es asi, ya que es un FrameLayout
+    - hay que en los dos enterAlwa...
+    - el minHigh(lo que queremos ver cuando empecemos a desplazarnos hacia arriba) se puede distribuir entre las
+      views o ponerlos en una sola
+    - si no ponemos scroll como minimo al hacer scro
+
+    -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:minHeight="200dp"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_collapseMode="parallax"
+            android:src="@drawable/paisaje10"
+            android:minHeight="56dp"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            android:scaleType="center"/>
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:minHeight="48dp"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

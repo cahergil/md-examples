@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!--puesta a transparent hace que la imagen del ctb ocupe toda la status bar-->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <!--causes a rare effect on the status bar when set to true-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--queda bien si queremos agrandar el recyclerview, se ve transparente la navigation bar-->
+        <item name="android:windowTranslucentNavigation">true</item>
+
+    </style>
+</resources>

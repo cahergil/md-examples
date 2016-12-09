@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        con el primero a false cuando desplazamos el rv hacia arriaba se termina juntando
+        con el texto, es decir, parece que elimina el padding del rv. Por defecto esta a true, impone
+        respetar el padding en todo momento-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.carlos.coordinatorlayout.coordinatorlayout.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carlos Hernandez Gil"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:paddingTop="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+       >
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
